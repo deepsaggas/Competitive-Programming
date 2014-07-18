@@ -14,59 +14,6 @@ public class Main {
 
 	static void solve() throws IOException
 	{
-		int t=ni();
-		while(t-->0)
-		{
-			int n=ni();
-			int a[]=new int[3];
-			a[0]=ni();
-			a[1]=ni();
-			a[2]=ni();
-			Arrays.sort(a);
-			//0<=i<=n/x
-			//0<=j<=n/y
-			//0<=k<=n/z
-			int x=a[2];
-			int y=a[1];
-			int z=a[0];
-			long overallMax=0;
-			int i=0,j=0,k=0;
-				
-				
-				
-			for(i=0;i<=n/x;i++)
-			{
-				long jMax=0;
-				for(j=0;j<=(n-(i*x))/y;j++)
-				{
-					k=(n-(i*x)-(j*y));
-					if(k>=0 && k%z==0)
-					{
-						k=k/z;
-						if(i+j+k>=jMax)
-						{
-							jMax=i+j+k;
-						}
-						else
-						{
-							//break;
-						}
-					}
-					if(k<0)
-						break;
-					//k=(N-ix-jy)/z
-				}
-				if(jMax<overallMax)
-				{
-					//break;
-				}
-				else
-				{
-					overallMax=jMax;
-				}			
-			}
-			out.println(overallMax);//+"n: "+n+"i: "+i+"j: "+j+"k: "+k);
-		}
 		
 	}
 
@@ -171,7 +118,6 @@ public class Main {
 		long[] a = new long[n];
 		for(int i = 0;i < n;i++)a[i] = nl();
 		return a;
-		int blah;
 	}
 	private static int ni()
 	{
